@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed":"#001c3b","surface-tint":"#465f86","error-container":"#ffdad6","surface-variant":"#d3e4fe","surface-container":"#e5eeff","surface":"#f8f9ff","inverse-primary":"#aec8f4","secondary-fixed-dim":"#6bd8cb","surface-container-low":"#eff4ff","secondary-fixed":"#89f5e7","primary-container":"#1f3a5f","on-tertiary":"#ffffff","tertiary-fixed-dim":"#4edea3","on-tertiary-fixed-variant":"#005236","tertiary-fixed":"#6ffbbe","inverse-on-surface":"#eaf1ff","surface-container-high":"#dce9ff","tertiary-container":"#00432c","on-secondary-fixed-variant":"#005049","surface-dim":"#cbdbf5","on-secondary-container":"#006f66","tertiary":"#002b1b","secondary-container":"#86f2e4","on-surface-variant":"#43474e","error":"#ba1a1a","on-surface":"#0b1c30","outline":"#74777f","background":"#f8f9ff","on-tertiary-container":"#14ba82","on-background":"#0b1c30","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#2d476d","on-error":"#ffffff","primary-fixed":"#d5e3ff","secondary":"#006a61","on-primary":"#ffffff","surface-container-lowest":"#ffffff","outline-variant":"#c4c6cf","on-secondary":"#ffffff","surface-bright":"#f8f9ff","on-error-container":"#93000a","primary-fixed-dim":"#aec8f4","on-tertiary-fixed":"#002113","on-secondary-fixed":"#00201d","on-primary-container":"#8ba4cf","inverse-surface":"#213145","primary":"#032448"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"0.75rem","margin-mobile":"1rem","space-sm":"0.5rem","space-xl":"2.5rem","space-lg":"1.5rem","space-md":"1rem","margin":"2rem","gutter":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"display-lg-mobile":["Rubik"],"label-lg":["Rubik"],"display-lg":["Rubik"],"body-sm":["Rubik"],"body-lg":["Rubik"],"label-md":["Rubik"],"headline-sm":["Rubik"],"headline-lg":["Rubik"],"body-md":["Rubik"],"headline-md":["Rubik"],"metric-display":["Rubik"]},"fontSize":{"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"metric-display":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 inset-x-0 h-16 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto h-16 w-full px-6 flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="SmartBasket AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBzKui7yFz6sinxKigbh67Q8PAGjS_4nujqBr6zhJHOy-aMWMDB1OH8UJwrZnSgJzCDxdJO7X9JeBDTyZ49q6PMNGVKItFgvIjQSkMti9hIIpQRaXZ56yE5mMeUvfHhgw89X1vwWk1JHBW_WPbbm98M1TQl04a1Cd7V7P6N_RIQ74fzZSxM-y-PiikF0k9eT0lYFaECc0jZJ3-IYT9u2ST1J2n3eYU3BDYpxgrm8zQN_5K5YiHgQhcmFXo"/><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight">SmartBasket AI</span><span class="text-outline-variant font-light">|</span><span class="font-body-md text-body-md text-on-surface-variant font-medium">סימולטור רווחיות לסל קנייה</span></div></div><div class="flex items-center gap-2"><span class="px-3 py-1 rounded-full text-xs font-semibold bg-surface-container-high text-primary">נתונים מדומים</span></div></div></header><div class=""><main class="relative pt-16 min-h-screen bg-surface"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto px-6 py-6 space-y-space-lg">
+<!-- Top Breadcrumb & Live Simulation Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm"><div class="flex items-center gap-space-md"><div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm"><span class="material-symbols-outlined">calculate</span></div><div><h1 class="font-headline-md text-headline-md text-primary tracking-tight">סימולטור רווחיות סל קניות בזמן אמת</h1><p class="font-body-sm text-body-sm text-on-surface-variant">ניתוח רווח תרומתי, עלויות שחיקה, פחת ועמלות סליקה עבור מכולות שכונתיות</p></div></div></div>
+<!-- Main Workspace: 2-Column Grid (Right Sidebar 340px, Left Flexible Canvas) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- RIGHT SIDEBAR (Col 1-4 on 12-col RTL: physically positioned right in RTL) -->
+<aside class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- CARD 1: Payment Fee Settings -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md relative overflow-hidden">
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-secondary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">credit_card</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">הגדרות עמלות תשלום</h2>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] cursor-help" title="עמלת הסליקה מנוכה ישירות מהפדיון הגולמי של הסל">info</span>
+</div>
+<!-- Segmented Toggle -->
+<div class="bg-surface-container-low p-1 rounded-lg flex items-center gap-1">
+<button class="flex-1 py-1.5 rounded-md font-label-lg text-label-lg font-medium text-center transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1" id="toggle-credit" type="button">
+<span class="material-symbols-outlined text-[16px]">credit_score</span>
+              אשראי (פעיל)
+            </button>
+<button class="flex-1 py-1.5 rounded-md font-label-lg text-label-lg font-medium text-center text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-1" id="toggle-cash" type="button">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+              מזומן (0%)
+            </button>
+</div>
+<!-- Inputs -->
+<div class="space-y-space-sm text-body-md font-body-md">
+<div>
+<div class="flex justify-between items-center mb-1">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="fee-fixed">
+<span>עמלה קבועה לעסקה</span>
+</label>
+<span class="text-xs text-primary font-semibold">₪ לטרנזקציה</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-on-surface font-semibold rounded-lg py-2 pr-8 pl-3 text-right focus:outline-none focus:bg-surface transition-all" id="fee-fixed" step="0.05" type="number" value="0.50"/>
+<span class="absolute right-2.5 text-on-surface-variant font-bold text-sm">₪</span>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<label class="font-label-md text-label-md text-on-surface-variant" for="fee-variable">עמלה משתנה (% מסך הסל)</label>
+<span class="text-xs text-primary font-semibold" id="fee-variable-label">1.50%</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low text-on-surface font-semibold rounded-lg py-2 pr-8 pl-3 text-right focus:outline-none focus:bg-surface transition-all" id="fee-variable" step="0.1" type="number" value="1.5"/>
+<span class="absolute right-2.5 text-on-surface-variant font-bold text-sm">%</span>
+</div>
+</div>
+</div>
+<!-- Computed Fee Highlight Box -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant">חישוב עמלה משוערת לסל:</span>
+<span class="text-xs text-outline font-mono tracking-tight" id="fee-formula-display">₪30.40 × 1.5% + ₪0.50</span>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-error font-bold" id="card-fee-total">₪0.96</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: Default Spoilage per Category -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">delete_sweep</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">פחת מוגדר לפי קטגוריה</h2>
+</div>
+<button class="text-xs font-semibold text-secondary hover:underline flex items-center gap-0.5" id="btn-edit-spoilage">
+<span>עריכת פחת</span>
+<span class="material-symbols-outlined text-[14px]">edit</span>
+</button>
+</div>
+<div class="space-y-2.5">
+<!-- Dry -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary-fixed text-on-primary-fixed">יבש (Dry)</span>
+<span class="text-xs text-on-surface-variant">שימורים, דגנים, מאפים</span>
+</div>
+<span class="font-bold text-primary text-sm font-mono">1.0%</span>
+</div>
+<!-- Dairy -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-secondary-container text-on-secondary-container">חלב ומקורר</span>
+<span class="text-xs text-on-surface-variant">גבינות, יוגורט, שתייה קרה</span>
+</div>
+<span class="font-bold text-secondary text-sm font-mono">10.0%</span>
+</div>
+<!-- Fresh Produce -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900">פירות וירקות</span>
+<span class="text-xs text-on-surface-variant">תוצרת טרייה, משקל</span>
+</div>
+<span class="font-bold text-amber-700 text-sm font-mono">20.0%</span>
+</div>
+</div>
+<div class="text-[11px] text-on-surface-variant leading-relaxed bg-surface-container p-2.5 rounded-lg flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary shrink-0 mt-0.5">tips_and_updates</span>
+<span>פחת משקלל אובדן חיי מדף, עודפי מלאי שנזרקים או שבר בחנות.</span>
+</div>
+</div>
+<!-- CARD 3: Quick Scenarios -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">bolt</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">תרחישים מהירים לבדיקה</h2>
+</div>
+<span class="text-xs text-on-surface-variant">סימולציה בלחיצה</span>
+</div>
+<div class="flex flex-col gap-2"><button class="w-full text-right p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all flex items-center justify-between group" id="scenario-cost-rise"><div class="flex items-center gap-2"><span class="w-8 h-8 rounded-md bg-error-container text-on-error-container flex items-center justify-center font-bold text-sm"><span class="material-symbols-outlined text-[18px]">trending_up</span></span><div class="font-label-lg text-label-lg font-semibold text-primary group-hover:text-secondary">התייקרות ספקים 5%</div></div><span class="material-symbols-outlined text-outline group-hover:translate-x-[-3px] transition-transform">chevron_left</span></button><button class="w-full text-right p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all flex items-center justify-between group" id="scenario-dairy-spoilage"><div class="flex items-center gap-2"><span class="w-8 h-8 rounded-md bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-sm">🧀</span><div class="font-label-lg text-label-lg font-semibold text-primary group-hover:text-secondary">התייקרות מוצרי חלב 10%</div></div><span class="material-symbols-outlined text-outline group-hover:translate-x-[-3px] transition-transform">chevron_left</span></button><button class="w-full text-right p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all flex items-center justify-between group" id="scenario-low-fee"><div class="flex items-center gap-2"><span class="w-8 h-8 rounded-md bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-sm"><span class="material-symbols-outlined text-[18px]">credit_card</span></span><div class="font-label-lg text-label-lg font-semibold text-primary group-hover:text-secondary">שינוי מסלול אשראי</div></div><span class="material-symbols-outlined text-outline group-hover:translate-x-[-3px] transition-transform">chevron_left</span></button><button class="w-full mt-1 py-2 px-space-md rounded-lg bg-transparent hover:bg-surface-container text-on-surface-variant hover:text-primary transition-all font-label-lg text-label-lg font-medium flex items-center justify-center gap-1.5" id="scenario-reset"><span class="material-symbols-outlined text-[18px]">restart_alt</span><span>איפוס לתרחיש הבסיס</span></button></div>
+</div>
+</aside>
+<!-- LEFT MAIN AREA (Col 5-12 on 12-col layout) -->
+<main class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- TOP SECTION: BASKET COMPOSITION -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<!-- Header Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-2 gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">בניית הסל וניתוח מוצרים</h2>
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant">נתונים לדוגמה</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">הרכב את מוצרי הסל ובדוק את השפעת הפחת והעמלות ברמת הפריט הבודד</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="text-xs font-semibold text-primary bg-surface-container-low px-3 py-1.5 rounded-lg" id="basket-counter-badge">
+                3 מוצרים בסל (סך 4 יחידות)
+              </div>
+<button class="px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-medium flex items-center gap-1 shadow-sm transition-all" id="add-product-btn">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>הוספה מהמאגר</span>
+</button>
+</div>
+</div>
+<!-- Product Table Container -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-right text-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md"><tr><th class="py-3 px-3">מוצר</th><th class="py-3 px-2">קטגוריה</th><th class="py-3 px-2 text-center">כמות</th><th class="py-3 px-3">מחיר קנייה</th><th class="py-3 px-3">מחיר מכירה</th><th class="py-3 px-2 text-center">פחת %</th><th class="py-3 px-3">רווח לפני עמלה</th><th class="py-3 px-2 text-center">פעולות</th></tr></thead>
+<tbody class="divide-y divide-surface-container" id="basket-tbody"><tr class="hover:bg-surface-container-low/60 transition-colors" data-cost="5.00" data-id="bread" data-price="7.00" data-qty="1" data-spoilage="1"><td class="py-3.5 px-3"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-md bg-amber-50 text-amber-800 flex items-center justify-center font-bold text-base">🍞</div><div><div class="font-semibold text-primary">לחם אחיד כהה פרוס</div></div></div></td><td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-primary-fixed text-on-primary-fixed">יבש 1%</span></td><td class="py-3.5 px-2 text-center"><div class="inline-flex items-center bg-surface-container-low rounded-lg p-0.5"><button class="qty-btn-minus w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-primary font-bold">-</button><span class="qty-value px-2 font-mono font-bold text-on-surface">1</span><button class="qty-btn-plus w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-primary font-bold">+</button></div></td><td class="py-3.5 px-3 font-mono font-medium text-on-surface">₪5.00</td><td class="py-3.5 px-3 font-mono font-bold text-primary">₪7.00</td><td class="py-3.5 px-2 text-center font-mono text-outline">1%</td><td class="py-3.5 px-3"><div class="font-mono font-bold text-secondary">₪1.95</div></td><td class="py-3.5 px-2 text-center"><button class="row-delete-btn text-outline hover:text-error transition-colors p-1 rounded hover:bg-error-container/30" title="מחק מוצר"><span class="material-symbols-outlined text-[18px]">delete</span></button></td></tr><tr class="hover:bg-surface-container-low/60 transition-colors" data-cost="5.40" data-id="milk" data-price="7.20" data-qty="2" data-spoilage="10"><td class="py-3.5 px-3"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-md bg-cyan-50 text-cyan-800 flex items-center justify-center font-bold text-base">🥛</div><div><div class="font-semibold text-primary">חלב 3% קרטון (1 ליטר)</div></div></div></td><td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">חלב-מקורר 10%</span></td><td class="py-3.5 px-2 text-center"><div class="inline-flex items-center bg-surface-container-low rounded-lg p-0.5"><button class="qty-btn-minus w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-primary font-bold">-</button><span class="qty-value px-2 font-mono font-bold text-on-surface">2</span><button class="qty-btn-plus w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-primary font-bold">+</button></div></td><td class="py-3.5 px-3 font-mono font-medium text-on-surface">₪5.40</td><td class="py-3.5 px-3 font-mono font-bold text-primary">₪7.20</td><td class="py-3.5 px-2 text-center font-mono text-secondary font-semibold">10%</td><td class="py-3.5 px-3"><div class="font-mono font-bold text-secondary">₪2.40</div></td><td class="py-3.5 px-2 text-center"><button class="row-delete-btn text-outline hover:text-error transition-colors p-1 rounded hover:bg-error-container/30" title="מחק מוצר"><span class="material-symbols-outlined text-[18px]">delete</span></button></td></tr><tr class="hover:bg-surface-container-low/60 transition-colors" data-cost="6.40" data-id="tomato" data-price="9.00" data-qty="1" data-spoilage="20"><td class="py-3.5 px-3"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-md bg-rose-50 text-rose-800 flex items-center justify-center font-bold text-base">🍅</div><div><div class="font-semibold text-primary">עגבניות חממה 1 ק"ג</div></div></div></td><td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900">ירקות-פירות 20%</span></td><td class="py-3.5 px-2 text-center"><div class="inline-flex items-center bg-surface-container-low rounded-lg p-0.5"><button class="qty-btn-minus w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-primary font-bold">-</button><span class="qty-value px-2 font-mono font-bold text-on-surface">1</span><button class="qty-btn-plus w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-primary font-bold">+</button></div></td><td class="py-3.5 px-3 font-mono font-medium text-on-surface">₪6.40</td><td class="py-3.5 px-3 font-mono font-bold text-primary">₪9.00</td><td class="py-3.5 px-2 text-center font-mono text-amber-700 font-semibold">20%</td><td class="py-3.5 px-3"><div class="font-mono font-bold text-secondary">₪1.00</div></td><td class="py-3.5 px-2 text-center"><button class="row-delete-btn text-outline hover:text-error transition-colors p-1 rounded hover:bg-error-container/30" title="מחק מוצר"><span class="material-symbols-outlined text-[18px]">delete</span></button></td></tr></tbody>
+<!-- Summary Totals Row -->
+<tfoot><tr class="bg-surface-container font-semibold text-on-surface"><td class="py-3 px-3 font-bold text-primary" colspan="3">סה"כ מוצרי הסל</td><td class="py-3 px-3 font-mono" id="sum-cost">₪22.20</td><td class="py-3 px-3 font-mono text-primary font-bold" id="sum-revenue">₪30.40</td><td class="py-3 px-2 text-center text-xs text-on-surface-variant font-mono"></td><td class="py-3 px-3 font-mono text-secondary font-bold" id="sum-naive-margin">₪5.35</td><td></td></tr></tfoot>
+</table>
+</div>
+<!-- What-If Interactive Simulation Sliders -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">סימולציית "מה-אם" (What-If Controls)</span>
+</div>
+<span class="text-xs text-on-surface-variant">הזז את המכוונים לצפייה בהשפעה מיידית על השורה התחתונה</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Slider 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-semibold text-on-surface">מחיר מכירה כללי (% ±)</span>
+<span class="font-mono font-bold text-secondary" id="slider-price-val">0%</span>
+</div>
+<input class="w-full accent-secondary cursor-pointer h-1.5 bg-surface-container rounded-lg" id="slider-price" max="15" min="-15" step="1" type="range" value="0"/>
+<div class="flex justify-between text-[10px] text-outline mt-1 font-mono">
+<span>-15%</span>
+<span>בסיס (0)</span>
+<span>+15%</span>
+</div>
+</div>
+<!-- Slider 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm"><div class="flex justify-between items-center text-xs mb-1"><span class="font-semibold text-on-surface">שינוי פחת (נקודות אחוז)</span><span class="font-mono font-bold text-amber-700" id="slider-spoilage-val">0 (בסיס)</span></div><input class="w-full accent-secondary cursor-pointer h-1.5 bg-surface-container rounded-lg" id="slider-spoilage" max="10" min="-10" step="1" type="range" value="0"/><div class="flex justify-between text-[10px] text-outline mt-1 font-mono"><span>-10</span><span>0 (בסיס)</span><span>+10</span></div></div>
+<!-- Slider 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex justify-between items-center text-xs mb-1">
+<span class="font-semibold text-on-surface">עלות ספקים / קנייה (% ±)</span>
+<span class="font-mono font-bold text-error" id="slider-cost-val">0%</span>
+</div>
+<input class="w-full accent-secondary cursor-pointer h-1.5 bg-surface-container rounded-lg" id="slider-cost" max="15" min="-10" step="1" type="range" value="0"/>
+<div class="flex justify-between text-[10px] text-outline mt-1 font-mono">
+<span>-10%</span>
+<span>בסיס (0)</span>
+<span>+15%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BOTTOM SECTION: RESULTS & PROFITABILITY -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">query_stats</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">תוצאות הסל</h2>
+</div>
+<div class="text-xs text-on-surface-variant font-medium">מעודכן לפי קופת מזומן / מסלול סליקה נבחר</div>
+</div>
+<!-- 4 Large KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md"><!-- Hero Card: Contribution Margin --><div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col justify-between border-2 border-secondary/30 relative overflow-hidden bg-gradient-to-bl from-surface-container-lowest via-surface-container-lowest to-secondary/10 sm:col-span-2 lg:col-span-1"><div class="flex items-center justify-between mb-1"><span class="px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-secondary text-on-secondary shadow-sm">רווח תרומתי משוער לסל</span><span class="material-symbols-outlined text-secondary text-[22px]">savings</span></div><div><div class="font-display-lg text-display-lg font-bold text-secondary font-mono tracking-tight" id="kpi-real-profit">₪4.39</div><div class="flex items-center gap-1.5 mt-0.5"><span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-bold text-xs" id="kpi-real-percent">14.4% מההכנסות</span></div></div><div class="text-[11px] text-on-surface-variant mt-2">רווח תרומתי לסל — לא כולל שכירות, שכר והוצאות קבועות</div></div><!-- Card 2: Revenue --><div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"><div class="flex items-center justify-between mb-2"><span class="font-label-md text-label-md text-on-surface-variant">הכנסות הסל</span><span class="material-symbols-outlined text-outline text-[18px]">receipt_long</span></div><div class="font-metric-display text-metric-display font-bold text-primary font-mono tracking-tight" id="kpi-revenue">₪30.40</div><div class="text-xs text-outline mt-1">4 פריטים בסל (סך הכל)</div></div><!-- Card 3: Naive Margin --><div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"><div class="flex items-center justify-between mb-2"><span class="font-label-md text-label-md text-on-surface-variant">רווח נאיבי (לפני פחת ועמלה)</span><span class="material-symbols-outlined text-outline text-[18px]">account_balance_wallet</span></div><div class="font-metric-display text-metric-display font-bold text-primary font-mono tracking-tight" id="kpi-naive">₪8.20</div><div class="text-xs text-on-surface-variant mt-1" id="kpi-naive-percent">27.0% מההכנסות (לפני שחיקות)</div></div><!-- Card 4: Spoilage --><div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"><div class="flex items-center justify-between mb-2"><span class="font-label-md text-label-md text-on-surface-variant">שחיקת פחת</span><span class="material-symbols-outlined text-amber-700 text-[18px]">delete</span></div><div class="font-metric-display text-metric-display font-bold text-amber-700 font-mono tracking-tight">₪2.85</div><div class="text-xs text-outline mt-1">בלאי חיי מדף משוקלל</div></div><!-- Card 5: Payment Fee --><div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"><div class="flex items-center justify-between mb-2"><span class="font-label-md text-label-md text-on-surface-variant">עמלת אשראי (סליקה)</span><span class="material-symbols-outlined text-error text-[18px]">credit_card</span></div><div class="font-metric-display text-metric-display font-bold text-error font-mono tracking-tight">₪0.96</div><div class="text-xs text-outline mt-1 font-mono">₪0.50 + 1.5% × ₪30.40</div></div><!-- Card 6: Total Erosion --><div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"><div class="flex items-center justify-between mb-2"><span class="font-label-md text-label-md text-on-surface-variant">סך שחיקה והוצאות (פחת + עמלה)</span><span class="material-symbols-outlined text-error text-[18px]">trending_down</span></div><div class="font-metric-display text-metric-display font-bold text-error font-mono tracking-tight" id="kpi-erosion">₪3.81</div><div class="text-xs text-outline mt-1 font-mono" id="kpi-erosion-breakdown">פחת: ₪2.85 | עמלות: ₪0.96</div></div></div>
+<!-- Visual Waterfall Chart Container -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">waterfall_chart</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">תרשים מפל שחיקת הרווחיות (Waterfall Breakdown)</h3>
+</div>
+<span class="text-xs text-outline">כיצד הרווח הנאיבי מצטמצם עד לרווח התרומתי הסופי</span>
+</div>
+<!-- Stepped Waterfall Bar Chart Visualization -->
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm items-end min-h-[190px]"><!-- Step 1: Naive Gross Profit --><div class="flex flex-col items-center justify-end h-full"><span class="font-mono font-bold text-primary mb-1 text-sm" id="wf-val-naive">8.20 ₪</span><div class="w-full bg-primary-container rounded-t-lg transition-all duration-500 h-36 flex flex-col items-center justify-center p-2 text-on-primary"><span class="material-symbols-outlined text-[20px]">trending_up</span><span class="text-xs font-bold text-center mt-1">רווח נאיבי</span></div><div class="w-full text-center mt-2"><div class="text-xs font-bold text-primary">קנייה מול מכירה</div><div class="text-[10px] text-outline">ללא הוצאות נלוות</div></div></div><!-- Step 2: Spoilage Loss --><div class="flex flex-col items-center justify-end h-full"><span class="font-mono font-bold text-amber-700 mb-1 text-sm" id="wf-val-spoilage">2.85- ₪</span><div class="w-full bg-amber-500 rounded-t-lg transition-all duration-500 h-24 flex flex-col items-center justify-center p-2 text-white"><span class="material-symbols-outlined text-[20px]">delete</span><span class="text-xs font-bold text-center mt-1">פחת מוצרים</span></div><div class="w-full text-center mt-2"><div class="text-xs font-bold text-amber-800">אובדן בלאי וחיי מדף</div><div class="text-[10px] text-outline">עגבניות, חלב ולחם</div></div></div><!-- Step 3: Payment Terminal Fees --><div class="flex flex-col items-center justify-end h-full"><span class="font-mono font-bold text-error mb-1 text-sm" id="wf-val-fees">0.96- ₪</span><div class="w-full bg-rose-500 rounded-t-lg transition-all duration-500 h-16 flex flex-col items-center justify-center p-2 text-white"><span class="material-symbols-outlined text-[20px]">credit_card_off</span><span class="text-xs font-bold text-center mt-1">עמלת סליקה</span></div><div class="w-full text-center mt-2"><div class="text-xs font-bold text-error">מסלול אשראי</div><div class="text-[10px] text-outline">₪0.50 + 1.5%</div></div></div><!-- Step 4: True Contribution Margin --><div class="flex flex-col items-center justify-end h-full"><span class="font-mono font-bold text-secondary mb-1 text-base" id="wf-val-real">4.39 ₪</span><div class="w-full bg-secondary rounded-t-lg transition-all duration-500 h-28 flex flex-col items-center justify-center p-2 text-on-secondary shadow-md"><span class="material-symbols-outlined text-[22px]">verified</span><span class="text-xs font-bold text-center mt-1">רווח תרומתי משוער</span></div><div class="w-full text-center mt-2"><div class="text-xs font-bold text-secondary">תרומת הסל לעסק</div><div class="text-[10px] text-secondary font-semibold">14.4% מההכנסות</div></div></div></div>
+</div>
+<!-- Break-Even Line & Fixed Costs Banner -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]">balance</span><div><span class="font-label-lg text-label-lg font-bold text-primary">נקודת איזון של הסל (Break-Even): </span><span class="font-mono font-bold text-primary" id="breakeven-value">₪25.94</span><span class="text-xs text-on-surface-variant mr-1.5">(מתחת לסכום זה העסקה מניבה הפסד תפעולי ישיר לסל)</span></div></div><div class="text-[11px] text-outline font-medium flex items-center gap-1 shrink-0"><span class="material-symbols-outlined text-[15px]">info</span><span>רווח תרומתי לסל — לא כולל שכירות, שכר והוצאות קבועות</span></div></div>
+</div>
+<!-- AI INSIGHTS CALLOUT BOX -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md border border-outline-variant/30"><div class="flex items-center justify-between pb-2 border-b border-surface-container"><h3 class="font-headline-sm text-headline-sm font-bold text-primary">תובנות</h3></div><div class="grid grid-cols-1 md:grid-cols-3 gap-space-md"><!-- Bullet 1 --><div class="bg-surface-container-low p-space-md rounded-xl space-y-1.5"><div class="flex items-center gap-1.5 text-secondary font-bold text-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>פחת עגבניות</span></div><p class="text-xs leading-relaxed text-on-surface">העגבניות אחראיות לרוב ההפסד על פחת: ₪1.60 מתוך ₪2.85.</p></div><!-- Bullet 2 --><div class="bg-surface-container-low p-space-md rounded-xl space-y-1.5"><div class="flex justify-between items-center text-xs mb-1"><span class="font-semibold text-on-surface">שינוי פחת (נקודות אחוז)</span><span class="font-mono font-bold text-amber-700" id="slider-spoilage-val">0 (בסיס)</span></div><input class="w-full accent-secondary cursor-pointer h-1.5 bg-surface-container rounded-lg" id="slider-spoilage" max="10" min="-10" step="1" type="range" value="0"/><div class="flex justify-between text-[10px] text-outline mt-1 font-mono"><span>-10</span><span>0 (בסיס)</span><span>+10</span></div></div><!-- Bullet 3 --><div class="bg-surface-container-low p-space-md rounded-xl space-y-1.5"><div class="flex items-center gap-1.5 text-secondary font-bold text-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>מנאיבי לתרומתי</span></div><p class="text-xs leading-relaxed text-on-surface">בלי פחת ועמלה הסל היה מרוויח ₪8.20; בפועל נשארים כ-₪4.39 לפני הוצאות קבועות.</p></div></div><div class="pt-1 text-[11px] text-outline text-right font-medium">התובנות מבוססות על החישוב בלבד ואינן הבטחה לשיפור רווח</div></div>
+</section>
+</main>
+</div>
+</div>
+</div>
+<script>
+(function() {
+  // Simulator State
+  const state = {
+    paymentMethod: 'credit', // 'credit' | 'cash'
+    fixedFee: 0.50,
+    variableFeePercent: 1.5,
+    sliderPricePct: 0,
+    sliderCostPct: 0,
+    spoilageAdjustment: 0, // Delta applied from slider
+    products: [
+      { id: 'bread', name: 'לחם אחיד כהה', cat: 'יבש', qty: 1, baseCost: 5.00, basePrice: 7.00, baseSpoilage: 1 },
+      { id: 'milk', name: 'חלב 3% קרטון', cat: 'חלב-מקורר', qty: 2, baseCost: 5.40, basePrice: 7.20, baseSpoilage: 10 },
+      { id: 'tomato', name: 'עגבניות חממה 1 ק"ג', cat: 'ירקות-פירות', qty: 1, baseCost: 6.40, basePrice: 9.00, baseSpoilage: 20 }
+    ]
+  };
+
+  // DOM Elements
+  const elCreditBtn = document.getElementById('toggle-credit');
+  const elCashBtn = document.getElementById('toggle-cash');
+  const elFeeFixed = document.getElementById('fee-fixed');
+  const elFeeVariable = document.getElementById('fee-variable');
+  const elFeeFormulaDisplay = document.getElementById('fee-formula-display');
+  const elCardFeeTotal = document.getElementById('card-fee-total');
+
+  const elSliderPrice = document.getElementById('slider-price');
+  const elSliderCost = document.getElementById('slider-cost');
+  const elSliderSpoilage = document.getElementById('slider-spoilage');
+  const elSliderPriceVal = document.getElementById('slider-price-val');
+  const elSliderCostVal = document.getElementById('slider-cost-val');
+  const elSliderSpoilageVal = document.getElementById('slider-spoilage-val');
+
+  const elSumCost = document.getElementById('sum-cost');
+  const elSumRevenue = document.getElementById('sum-revenue');
+  const elSumNaiveMargin = document.getElementById('sum-naive-margin');
+  const elBasketCounter = document.getElementById('basket-counter-badge');
+
+  const elKpiRevenue = document.getElementById('kpi-revenue');
+  const elKpiNaive = document.getElementById('kpi-naive');
+  const elKpiNaivePercent = document.getElementById('kpi-naive-percent');
+  const elKpiRealProfit = document.getElementById('kpi-real-profit');
+  const elKpiRealPercent = document.getElementById('kpi-real-percent');
+  const elKpiErosion = document.getElementById('kpi-erosion');
+  const elKpiErosionBreakdown = document.getElementById('kpi-erosion-breakdown');
+  const elBreakEven = document.getElementById('breakeven-value');
+
+  const elWfValNaive = document.getElementById('wf-val-naive');
+  const elWfValSpoilage = document.getElementById('wf-val-spoilage');
+  const elWfValFees = document.getElementById('wf-val-fees');
+  const elWfValReal = document.getElementById('wf-val-real');
+
+  function fmtILS(num) {
+    return '₪' + Number(num).toFixed(2);
+  }
+
+  function recalculate() {
+    let totalItemsCount = 0;
+    let totalBaseCost = 0;
+    let totalBaseRevenue = 0;
+    let totalSpoilageCost = 0;
+
+    const priceMultiplier = 1 + (state.sliderPricePct / 100);
+    const costMultiplier = 1 + (state.sliderCostPct / 100);
+
+    state.products.forEach(p => {
+      totalItemsCount += p.qty;
+      const unitCost = p.baseCost * costMultiplier;
+      const unitPrice = p.basePrice * priceMultiplier;
+
+      const itemCostTotal = unitCost * p.qty;
+      const itemPriceTotal = unitPrice * p.qty;
+
+      totalBaseCost += itemCostTotal;
+      totalBaseRevenue += itemPriceTotal;
+
+      // Spoilage calculation: base spoilage modified by slider
+      const effectiveSpoilagePct = Math.max(0, p.baseSpoilage + state.spoilageAdjustment);
+      const itemSpoilage = itemCostTotal * (effectiveSpoilagePct / 100);
+      totalSpoilageCost += itemSpoilage;
+    });
+
+    // Payment Fees
+    let effectiveFee = 0;
+    if (state.paymentMethod === 'credit') {
+      const varFee = totalBaseRevenue * (state.variableFeePercent / 100);
+      effectiveFee = totalBaseRevenue > 0 ? (varFee + state.fixedFee) : 0;
+      elFeeFormulaDisplay.innerText = `${fmtILS(totalBaseRevenue)} × ${state.variableFeePercent}% + ${fmtILS(state.fixedFee)}`;
+    } else {
+      effectiveFee = 0;
+      elFeeFormulaDisplay.innerText = 'מזומן - ללא עמלות סליקה';
+    }
+
+    elCardFeeTotal.innerText = fmtILS(effectiveFee);
+
+    // Margins
+    const naiveGrossMargin = totalBaseRevenue - totalBaseCost;
+    const naiveMarginPct = totalBaseRevenue > 0 ? ((naiveGrossMargin / totalBaseRevenue) * 100).toFixed(1) : 0;
+
+    const totalErosion = totalSpoilageCost + effectiveFee;
+    const realContributionMargin = naiveGrossMargin - totalErosion;
+    const realMarginPct = totalBaseRevenue > 0 ? ((realContributionMargin / totalBaseRevenue) * 100).toFixed(1) : 0;
+    const erosionPctOfNaive = naiveGrossMargin > 0 ? ((totalErosion / naiveGrossMargin) * 100).toFixed(1) : 0;
+
+    // Break-even
+    const breakEvenPoint = totalBaseCost + totalSpoilageCost + (state.paymentMethod === 'credit' ? state.fixedFee : 0);
+
+    // Update Top Summary Row
+    elSumCost.innerText = fmtILS(totalBaseCost);
+    elSumRevenue.innerText = fmtILS(totalBaseRevenue);
+    elSumNaiveMargin.innerText = fmtILS(naiveGrossMargin);
+    elBasketCounter.innerText = `${state.products.length} מוצרים בסל (סך ${totalItemsCount} יחידות)`;
+
+    // Update KPI Cards
+    elKpiRevenue.innerText = fmtILS(totalBaseRevenue);
+    elKpiNaive.innerText = fmtILS(naiveGrossMargin);
+    elKpiNaivePercent.innerText = `${naiveMarginPct}% מההכנסות (לפני שחיקות)`;
+
+    elKpiRealProfit.innerText = fmtILS(realContributionMargin);
+    elKpiRealPercent.innerText = `${realMarginPct}% מההכנסות`;
+
+    elKpiErosion.innerText = fmtILS(totalErosion);
+    elKpiErosionBreakdown.innerText = `פחת: ${fmtILS(totalSpoilageCost)} | עמלות: ${fmtILS(effectiveFee)}`;
+
+    elBreakEven.innerText = fmtILS(breakEvenPoint);
+
+    // Update Waterfall Pillars
+    elWfValNaive.innerText = fmtILS(naiveGrossMargin);
+    elWfValSpoilage.innerText = `-${fmtILS(totalSpoilageCost)}`;
+    elWfValFees.innerText = `-${fmtILS(effectiveFee)}`;
+    elWfValReal.innerText = fmtILS(realContributionMargin);
+  }
+
+  // Toggle Credit / Cash
+  elCreditBtn.addEventListener('click', () => {
+    state.paymentMethod = 'credit';
+    elCreditBtn.className = 'flex-1 py-1.5 rounded-md font-label-lg text-label-lg font-medium text-center transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1';
+    elCashBtn.className = 'flex-1 py-1.5 rounded-md font-label-lg text-label-lg font-medium text-center text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-1';
+    recalculate();
+  });
+
+  elCashBtn.addEventListener('click', () => {
+    state.paymentMethod = 'cash';
+    elCashBtn.className = 'flex-1 py-1.5 rounded-md font-label-lg text-label-lg font-medium text-center transition-all bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1';
+    elCreditBtn.className = 'flex-1 py-1.5 rounded-md font-label-lg text-label-lg font-medium text-center text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center gap-1';
+    recalculate();
+  });
+
+  // Inputs Fee updates
+  elFeeFixed.addEventListener('input', (e) => {
+    state.fixedFee = parseFloat(e.target.value) || 0;
+    recalculate();
+  });
+
+  elFeeVariable.addEventListener('input', (e) => {
+    state.variableFeePercent = parseFloat(e.target.value) || 0;
+    document.getElementById('fee-variable-label').innerText = `${state.variableFeePercent.toFixed(2)}%`;
+    recalculate();
+  });
+
+  // What-If Sliders
+  elSliderPrice.addEventListener('input', (e) => {
+    state.sliderPricePct = parseInt(e.target.value, 10);
+    elSliderPriceVal.innerText = `${state.sliderPricePct > 0 ? '+' : ''}${state.sliderPricePct}%`;
+    recalculate();
+  });
+
+  elSliderCost.addEventListener('input', (e) => {
+    state.sliderCostPct = parseInt(e.target.value, 10);
+    elSliderCostVal.innerText = `${state.sliderCostPct > 0 ? '+' : ''}${state.sliderCostPct}%`;
+    recalculate();
+  });
+
+  elSliderSpoilage.addEventListener('input', (e) => {
+    const rawVal = parseInt(e.target.value, 10);
+    // Offset from baseline (12.5% mid-point)
+    state.spoilageAdjustment = rawVal - 12;
+    elSliderSpoilageVal.innerText = `${rawVal}% (${state.spoilageAdjustment >= 0 ? '+' : ''}${state.spoilageAdjustment}%)`;
+    recalculate();
+  });
+
+  // Scenario Buttons
+  document.getElementById('scenario-cost-rise').addEventListener('click', () => {
+    elSliderCost.value = 5;
+    state.sliderCostPct = 5;
+    elSliderCostVal.innerText = '+5%';
+    recalculate();
+  });
+
+  document.getElementById('scenario-dairy-spoilage').addEventListener('click', () => {
+    const milk = state.products.find(p => p.id === 'milk');
+    if (milk) milk.baseCost = 5.85;
+    recalculate();
+  });
+
+  document.getElementById('scenario-low-fee').addEventListener('click', () => {
+    state.fixedFee = 0.20;
+    state.variableFeePercent = 1.0;
+    elFeeFixed.value = "0.20";
+    elFeeVariable.value = "1.0";
+    document.getElementById('fee-variable-label').innerText = '1.00%';
+    recalculate();
+  });
+
+  document.getElementById('scenario-reset').addEventListener('click', () => {
+    state.paymentMethod = 'credit';
+    elCreditBtn.click();
+    state.fixedFee = 0.50;
+    state.variableFeePercent = 1.5;
+    elFeeFixed.value = "0.50";
+    elFeeVariable.value = "1.5";
+    document.getElementById('fee-variable-label').innerText = '1.50%';
+
+    elSliderPrice.value = 0;
+    state.sliderPricePct = 0;
+    elSliderPriceVal.innerText = '0%';
+
+    elSliderCost.value = 0;
+    state.sliderCostPct = 0;
+    elSliderCostVal.innerText = '0%';
+
+    elSliderSpoilage.value = 12;
+    state.spoilageAdjustment = 0;
+    elSliderSpoilageVal.innerText = 'בסיס (12.5%)';
+
+    const milk = state.products.find(p => p.id === 'milk');
+    if (milk) milk.baseCost = 5.40;
+
+    recalculate();
+  });
+
+  // Quantity and Row Controls
+  document.querySelectorAll('#basket-tbody tr').forEach(row => {
+    const id = row.getAttribute('data-id');
+    const plusBtn = row.querySelector('.qty-btn-plus');
+    const minusBtn = row.querySelector('.qty-btn-minus');
+    const qtyVal = row.querySelector('.qty-value');
+    const deleteBtn = row.querySelector('.row-delete-btn');
+
+    plusBtn.addEventListener('click', () => {
+      const prod = state.products.find(p => p.id === id);
+      if (prod) {
+        prod.qty++;
+        qtyVal.innerText = prod.qty;
+        recalculate();
+      }
+    });
+
+    minusBtn.addEventListener('click', () => {
+      const prod = state.products.find(p => p.id === id);
+      if (prod && prod.qty > 1) {
+        prod.qty--;
+        qtyVal.innerText = prod.qty;
+        recalculate();
+      }
+    });
+
+    deleteBtn.addEventListener('click', () => {
+      const idx = state.products.findIndex(p => p.id === id);
+      if (idx !== -1) {
+        state.products.splice(idx, 1);
+        row.remove();
+        recalculate();
+      }
+    });
+  });
+
+  // Micro-interaction tooltips / alert notices
+  document.getElementById('add-product-btn').addEventListener('click', () => {
+    alert('קטלוג מוצרים מלא (ברקודים וספקים) ייפתח בחלון מודאלי בגרסה המלאה.');
+  });
+
+  document.getElementById('btn-save-scenario').addEventListener('click', () => {
+    alert('התרחיש נשמר בהצלחה תחת: "תרחיש סל יום ד׳ - שחיקת פחת".');
+  });
+
+  document.getElementById('quick-export-btn').addEventListener('click', () => {
+    alert('קישור לשיתוף סימולציית הסל הועתק ללוח!');
+  });
+
+  // Initial calculation run
+  recalculate();
+})();
+</script></main></div></body></html>
