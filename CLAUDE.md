@@ -66,7 +66,7 @@ tests/                    בדיקות pytest (לפחות 12 מקרים, כול�
 טכנולוגיות: Python, Streamlit, Pandas (לממשק בלבד; המנוע לא תלוי בו), Plotly, pytest.
 
 ## עיצוב
-מפרט המסך ופרומפט מוכן ל-Stitch נמצאים ב-`docs/UX_SPEC.md`. העיצוב ב-Stitch הושלם: `design/dashboard.png` + `design/dashboard.html` הם הרפרנס הוויזואלי למימוש `app.py` (צבעים: נייבי #1F3A5F, טורקיז #0D9488, גופן Rubik).
+מפרט המסך ופרומפט מוכן ל-Stitch נמצאים ב-`docs/UX_SPEC.md`. העיצוב ב-Stitch הושלם: `design/dashboard`, `design/scenario_active` ו-`design/add_product_modal` (png + html) הם הרפרנס הוויזואלי למימוש `app.py` (צבעים: נייבי #1F3A5F, טורקיז #0D9488, גופן Rubik).
 
 ## סטטוס ותוכנית
 - [x] **שלב 1:** מנוע חישוב ו-26 בדיקות
