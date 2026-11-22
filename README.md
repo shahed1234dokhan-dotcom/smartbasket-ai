@@ -23,7 +23,7 @@
 
 ## הרצת הבדיקות
 ```bash
-pip install pytest
+pip install -r requirements.txt
 python -m pytest -v
 ```
 

@@ -56,10 +56,10 @@ streamlit run app.py         # הממשק (משלב 3)
 ```
 smartbasket/engine.py     ✅ חישובים, אימות קלט, compare_scenarios
 smartbasket/defaults.py   ✅ ברירות מחדל ומגבלות
-smartbasket/presets.py    ⏳ תרחישים מוכנים (מחזירים סל חדש ולא משנים את המקורי)
+smartbasket/presets.py    ✅ תרחישים מוכנים (מחזירים סל חדש ולא משנים את המקורי)
 smartbasket/insights.py   ⏳ תובנות כללים, ובהמשך אופציה למודל שפה עם חלופה
 smartbasket/charts.py     ⏳ גרף מפל וגרף לפני/אחרי (Plotly)
-data/products.json        ⏳ 10–15 מוצרים מדומים
+data/products.json        ✅ 12 מוצרים מדומים (מהעיצוב), נטען דרך smartbasket/catalog.py
 app.py                    ⏳ Streamlit, מסך יחיד, RTL
 tests/                    בדיקות pytest (לפחות 12 מקרים, כולל קלט לא תקין)
 ```
@@ -69,8 +69,8 @@ tests/                    בדיקות pytest (לפחות 12 מקרים, כול�
 מפרט המסך ופרומפט מוכן ל-Stitch נמצאים ב-`docs/UX_SPEC.md`. העיצוב ב-Stitch הושלם: `design/dashboard`, `design/scenario_active` ו-`design/add_product_modal` (png + html) הם הרפרנס הוויזואלי למימוש `app.py` (צבעים: נייבי #1F3A5F, טורקיז #0D9488, גופן Rubik).
 
 ## סטטוס ותוכנית
-- [x] **שלב 1:** מנוע חישוב ו-26 בדיקות
-- [ ] **שלב 2:** נתוני הדגמה ותרחישים מוכנים (התייקרות ספקים ב-5%, התייקרות מוצרי חלב, שינוי מסלול אשראי)
+- [x] **שלב 1:** מנוע חישוב ו-26 בדיקות (שלב 2 הוסיף 12, סה״כ 38)
+- [x] **שלב 2:** נתוני הדגמה ותרחישים מוכנים (התייקרות ספקים ב-5%, התייקרות מוצרי חלב, שינוי מסלול אשראי)
 - [x] **שלב 3א:** עיצוב המסך ב-Stitch (`design/`)
 - [ ] **שלב 3ב:** ממשק Streamlit
   - סרגל צד: עמלות ופחת

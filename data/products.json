@@ -1,0 +1,20 @@
+{
+  "_note": "נתונים מדומים לצורך הדגמה בלבד, לא מחירי שוק. המוצרים ומחירי המכירה לקוחים מעיצוב המסך (design/add_product_modal). מחיר קנייה ידוע רק לשלושת מוצרי דוגמת ה-PRD; לשאר הוא null ויחושב כאומדן (75% ממחיר המכירה).",
+  "mock": true,
+  "products": [
+    {"name": "לחם אחיד כהה", "category": "יבש", "sell_price": 7.00, "buy_price": 5.00},
+    {"name": "פסטה 500 גרם", "category": "יבש", "sell_price": 5.90, "buy_price": null},
+    {"name": "אורז 1 ק\"ג", "category": "יבש", "sell_price": 9.90, "buy_price": null},
+    {"name": "סוכר 1 ק\"ג", "category": "יבש", "sell_price": 6.50, "buy_price": null},
+
+    {"name": "חלב 3% קרטון", "category": "חלב-מקורר", "sell_price": 7.20, "buy_price": 5.40},
+    {"name": "גבינה לבנה 250 גרם", "category": "חלב-מקורר", "sell_price": 6.90, "buy_price": null},
+    {"name": "יוגורט טבעי", "category": "חלב-מקורר", "sell_price": 4.50, "buy_price": null},
+    {"name": "ביצים L תבנית 12", "category": "חלב-מקורר", "sell_price": 14.90, "buy_price": null},
+
+    {"name": "עגבניות חממה 1 ק\"ג", "category": "ירקות-פירות", "sell_price": 9.00, "buy_price": 6.40},
+    {"name": "בננות 1 ק\"ג", "category": "ירקות-פירות", "sell_price": 8.90, "buy_price": null},
+    {"name": "מלפפונים 1 ק\"ג", "category": "ירקות-פירות", "sell_price": 7.50, "buy_price": null},
+    {"name": "תפוחים 1 ק\"ג", "category": "ירקות-פירות", "sell_price": 10.90, "buy_price": null}
+  ]
+}
