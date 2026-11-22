@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "demo-stage2",
+      "runtimeExecutable": "C:\\Users\\HCnet\\smart basket\\.venv\\Scripts\\python.exe",
+      "runtimeArgs": ["-m", "streamlit", "run", "demo_stage2.py", "--server.port", "8501", "--server.headless", "true", "--browser.gatherUsageStats", "false"],
+      "port": 8501
+    }
+  ]
+}
